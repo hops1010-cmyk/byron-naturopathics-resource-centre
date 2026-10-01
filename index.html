@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>byron-naturopathics-resource-centre</title>
+    <meta
+      name="description"
+      content="information guide to good heath - part-1-alzheimers"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Resource Centre</p>
+        <h1>byron-naturopathics-resource-centre</h1>
+      </header>
+
+      <section class="content-card" aria-label="Resource description">
+        <p>information guide to good heath - part-1-alzheimers</p>
+      </section>
+
+      <section class="bot-panel" aria-label="Bot commands">
+        <div class="bot-header">
+          <h2>Resource Bot</h2>
+        </div>
+
+        <div id="bot-messages" class="bot-messages" aria-live="polite">
+          <div class="message bot-message">Welcome. Type /help to see the available commands.</div>
+        </div>
+
+        <div class="command-grid" aria-label="Command shortcuts">
+          <button type="button" class="command-btn" data-command="/help">/help</button>
+          <button type="button" class="command-btn" data-command="/about">/about</button>
+          <button type="button" class="command-btn" data-command="/resource">/resource</button>
+          <button type="button" class="command-btn" data-command="/health">/health</button>
+          <button type="button" class="command-btn" data-command="/guidance">/guidance</button>
+          <button type="button" class="command-btn" data-command="/tips">/tips</button>
+          <button type="button" class="command-btn" data-command="/status">/status</button>
+          <button type="button" class="command-btn" data-command="/contact">/contact</button>
+        </div>
+
+        <form id="bot-form" class="bot-form">
+          <label class="sr-only" for="bot-input">Enter a command</label>
+          <input
+            id="bot-input"
+            name="bot-input"
+            type="text"
+            placeholder="Type a command..."
+            autocomplete="off"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
