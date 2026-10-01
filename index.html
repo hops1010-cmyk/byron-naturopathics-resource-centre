@@ -1,60 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>byron-naturopathics-resource-centre</title>
-    <meta
-      name="description"
-      content="information guide to good heath - part-1-alzheimers"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="page">
-      <header class="hero">
-        <p class="eyebrow">Resource Centre</p>
-        <h1>byron-naturopathics-resource-centre</h1>
-      </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="A calm, practical resource centre exploring Alzheimer’s disease, metabolic health and whole-body context.">
+  <title>Byron Naturopathics · Resource Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Byron Naturopathics Resource Centre home"><span class="brand-mark">b.</span><span>BYRON NATUROPATHICS<small>RESOURCE CENTRE</small></span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#explore">Explore</a><a href="#mindmap">Mind map</a><a href="#quiz">Quick quiz</a><a href="#listen">Watch & listen</a><a class="nav-cta" href="links.html">PDF library <span aria-hidden="true">↗</span></a></nav>
+  </header>
 
-      <section class="content-card" aria-label="Resource description">
-        <p>information guide to good heath - part-1-alzheimers</p>
-      </section>
+  <main>
+    <section class="hero" id="explore">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A learning guide · Part one</p>
+        <h1>Alzheimer’s,<br><em>in a wider</em> context.</h1>
+        <p class="hero-lede">Explore the questions connecting brain health with metabolism, inflammation, sleep and the gut. Clear starting points, thoughtful resources and a little knowledge check along the way.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#mindmap">Start exploring <span aria-hidden="true">↓</span></a><a class="text-link" href="links.html">Browse the research library <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-note"><span class="note-icon">i</span><span>Evidence evolves. The “Type 3 diabetes” phrase is a proposed research framing, not an accepted diagnosis.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of connected systems"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb orb-brain">◎</div><div class="orb orb-leaf">✳</div><div class="orb orb-gut">〰</div><div class="orb orb-spark">✦</div><span class="art-caption">THE WHOLE BODY<br>IN THE CONVERSATION</span><span class="art-index">01 — 04</span></div>
+    </section>
 
-      <section class="bot-panel" aria-label="Bot commands">
-        <div class="bot-header">
-          <h2>Resource Bot</h2>
-        </div>
+    <section class="section intro-grid">
+      <div><p class="eyebrow">A place to begin</p><h2>One question.<br><em>Several systems.</em></h2></div>
+      <div class="intro-text"><p>Alzheimer’s disease is a complex condition. This guide looks at how researchers are examining brain energy use alongside wider factors such as metabolic health, immune signalling and the gut–brain relationship.</p><p>Use the map as a conversation starter, then follow the source material to explore the evidence and its limits for yourself.</p></div>
+    </section>
 
-        <div id="bot-messages" class="bot-messages" aria-live="polite">
-          <div class="message bot-message">Welcome. Type /help to see the available commands.</div>
-        </div>
+    <section class="map-section" id="mindmap">
+      <div class="section-heading"><div><p class="eyebrow">01 / Visual guide</p><h2>A map of the <em>connections</em></h2></div><p>Tap or click the map to view it at full size.</p></div>
+      <a class="map-frame" href="/images/alzheimer-metabolic-map.png" target="_blank" rel="noreferrer" aria-label="Open the Alzheimer’s metabolic connections mind map at full size"><img src="/images/alzheimer-metabolic-map.png" alt="Mind map showing proposed links among brain insulin signalling, systemic inflammation, gut health and Alzheimer’s disease." loading="lazy"><span class="map-expand">View full map ↗</span></a>
+      <p class="caption">A supplied visual overview. The claims and statistics shown in the infographic should be checked against current primary research; the map is not a diagnostic or treatment guide.</p>
+    </section>
 
-        <div class="command-grid" aria-label="Command shortcuts">
-          <button type="button" class="command-btn" data-command="/help">/help</button>
-          <button type="button" class="command-btn" data-command="/about">/about</button>
-          <button type="button" class="command-btn" data-command="/resource">/resource</button>
-          <button type="button" class="command-btn" data-command="/health">/health</button>
-          <button type="button" class="command-btn" data-command="/guidance">/guidance</button>
-          <button type="button" class="command-btn" data-command="/tips">/tips</button>
-          <button type="button" class="command-btn" data-command="/status">/status</button>
-          <button type="button" class="command-btn" data-command="/contact">/contact</button>
-        </div>
+    <section class="section quiz-section" id="quiz">
+      <div class="quiz-intro"><p class="eyebrow">02 / Check what stuck</p><h2>Quick <em>knowledge check</em></h2><p>Five questions to revisit the themes in this guide. Choose an answer to see a short explanation.</p><div class="quiz-progress"><span id="progress-label">Question 1 of 5</span><div class="progress-track"><span id="progress-fill"></span></div></div></div>
+      <div class="quiz-card" id="quiz-card" aria-live="polite"></div>
+    </section>
 
-        <form id="bot-form" class="bot-form">
-          <label class="sr-only" for="bot-input">Enter a command</label>
-          <input
-            id="bot-input"
-            name="bot-input"
-            type="text"
-            placeholder="Type a command..."
-            autocomplete="off"
-          />
-          <button type="submit">Send</button>
-        </form>
-      </section>
-    </main>
+    <section class="section media-section" id="listen">
+      <div class="section-heading"><div><p class="eyebrow">03 / Keep learning</p><h2>Watch, listen, <em>reflect</em></h2></div><a class="text-link" href="links.html">See all PDFs <span aria-hidden="true">↗</span></a></div>
+      <div class="media-grid">
+        <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 01</span><span class="play-glyph">▶</span></div><h3>The Alzheimer’s paradigm shift</h3><p>A starting point for considering broader metabolic questions in brain health.</p><video controls preload="none" aria-label="The Alzheimer’s paradigm shift video"><source src="/media/Alzheimer_s_Paradigm_Shift.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
+        <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 02</span><span class="play-glyph">▶</span></div><h3>How brains get “Type 3 diabetes”</h3><p>A short explainer on the hypothesis and the questions it raises.</p><video controls preload="none" aria-label="How brains get Type 3 diabetes video"><source src="/media/How_Brains_Get_Type_3_Diabetes.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="closing"><p class="eyebrow">Curiosity, with care</p><h2>Good questions make<br><em>better guides.</em></h2><p>Explore the source library and bring questions about your own health to a qualified clinician.</p><a class="button button-light" href="links.html">Open the PDF library <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">b.</span><span>BYRON NATUROPATHICS<small>RESOURCE CENTRE</small></span></a><p>Educational information only. Not medical advice or a substitute for professional care.</p><a href="links.html">PDF library ↗</a><span>© Byron Naturopathics</span></footer>
+</body>
 </html>
