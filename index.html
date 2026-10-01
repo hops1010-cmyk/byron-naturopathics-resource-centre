@@ -15,7 +15,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Byron Naturopathics Resource Centre home"><span class="brand-mark">b.</span><span>BYRON NATUROPATHICS<small>RESOURCE CENTRE</small></span></a>
-    <nav aria-label="Main navigation"><a class="active" href="#explore">Explore</a><a href="#mindmap">Mind map</a><a href="#quiz">Quick quiz</a><a href="#listen">Watch & listen</a><a class="nav-cta" href="links.html">PDF library <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a class="active" href="#explore">Explore</a><a class="bot-nav" href="#guide-bot">Guide bot</a><a href="#mindmap">Mind map</a><a href="#quiz">Quick quiz</a><a href="#listen">Watch & listen</a><a class="nav-cta" href="links.html">PDF library <span aria-hidden="true">↗</span></a></nav>
   </header>
 
   <main>
@@ -35,6 +35,32 @@
       <div class="intro-text"><p>Alzheimer’s disease is a complex condition. This guide looks at how researchers are examining brain energy use alongside wider factors such as metabolic health, immune signalling and the gut–brain relationship.</p><p>Use the map as a conversation starter, then follow the source material to explore the evidence and its limits for yourself.</p></div>
     </section>
 
+    <section class="bot-section" id="guide-bot">
+      <div class="bot-heading"><p class="eyebrow">Ask the guide · 8 commands</p><h2>A little bot for<br><em>finding your way.</em></h2><p>Search the guide and get short summaries of its topics and resources. It only answers from this site’s Part 1 content.</p></div>
+      <div class="bot-window" aria-label="Guide bot command interface">
+        <div class="bot-topbar"><div class="bot-lights"><i></i><i></i><i></i></div><span>BYRON GUIDE BOT</span><span class="bot-status"><i></i> READY</span></div>
+        <div class="bot-body">
+          <aside class="bot-commands"><p>COMMANDS</p>
+            <button type="button" data-command="/help">/help</button>
+            <button type="button" data-command="/overview">/overview</button>
+            <button type="button" data-command="/map">/map</button>
+            <button type="button" data-command="/topic brain">/topic &lt;word&gt;</button>
+            <button type="button" data-command="/summarise gut brain">/summarise &lt;topic&gt;</button>
+            <button type="button" data-command="/videos">/videos</button>
+            <button type="button" data-command="/pdfs">/pdfs</button>
+            <button type="button" data-command="/quiz">/quiz</button>
+          </aside>
+          <div class="bot-chat">
+            <div class="bot-messages" id="bot-messages" aria-live="polite" aria-relevant="additions text">
+              <div class="bot-message bot-reply"><span class="bot-avatar">b.</span><div><small>GUIDE BOT · NOW</small><p>Hi! I can help you find your way around the Part 1 guide. Try <code>/help</code> to see the eight commands.</p></div></div>
+            </div>
+            <form class="bot-form" id="bot-form"><label class="sr-only" for="bot-input">Enter a guide bot command</label><input id="bot-input" name="command" maxlength="180" autocomplete="off" placeholder="Try /summarise gut brain" required><button type="submit" aria-label="Send command">↑</button></form>
+            <p class="bot-footnote">Curated guide summaries only · Not medical advice</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="map-section" id="mindmap">
       <div class="section-heading"><div><p class="eyebrow">01 / Visual guide</p><h2>A map of the <em>connections</em></h2></div><p>Tap or click the map to view it at full size.</p></div>
       <a class="map-frame" href="/images/alzheimer-metabolic-map.png" target="_blank" rel="noreferrer" aria-label="Open the Alzheimer’s metabolic connections mind map at full size"><img src="/images/alzheimer-metabolic-map.png" alt="Mind map showing proposed links among brain insulin signalling, systemic inflammation, gut health and Alzheimer’s disease." loading="lazy"><span class="map-expand">View full map ↗</span></a>
@@ -51,6 +77,8 @@
       <div class="media-grid">
         <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 01</span><span class="play-glyph">▶</span></div><h3>The Alzheimer’s paradigm shift</h3><p>A starting point for considering broader metabolic questions in brain health.</p><video controls preload="none" aria-label="The Alzheimer’s paradigm shift video"><source src="/media/Alzheimer_s_Paradigm_Shift.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
         <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 02</span><span class="play-glyph">▶</span></div><h3>How brains get “Type 3 diabetes”</h3><p>A short explainer on the hypothesis and the questions it raises.</p><video controls preload="none" aria-label="How brains get Type 3 diabetes video"><source src="/media/How_Brains_Get_Type_3_Diabetes.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
+        <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 03</span><span class="play-glyph">▶</span></div><h3>The holistic diagnostic</h3><p>A broader look at dementia and whole-person context.</p><video controls preload="none" aria-label="The holistic diagnostic video"><source src="/media/The_Holistic_Diagnostic__Redefining_Dementia.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
+        <article class="media-card media-video"><div class="media-topline"><span class="media-type">VIDEO · 04</span><span class="play-glyph">▶</span></div><h3>The periphery-to-center pathway</h3><p>An overview of a systemic perspective on brain health.</p><video controls preload="none" aria-label="The periphery-to-center pathway video"><source src="/media/The_Periphery-to-Center_Pathway.mp4" type="video/mp4">Your browser does not support embedded video.</video></article>
       </div>
     </section>
 
